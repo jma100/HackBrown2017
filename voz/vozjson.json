@@ -1,0 +1,816 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "testroundtwo",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "AdvanceSlide"
+    },
+    {
+      "name": "ClosePowerpoint"
+    },
+    {
+      "name": "CloseYoutube"
+    },
+    {
+      "name": "GoBackASlide"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "OpenPowerpoint"
+    },
+    {
+      "name": "OpenYoutube"
+    },
+    {
+      "name": "PauseVideo"
+    },
+    {
+      "name": "PlayVideo"
+    },
+    {
+      "name": "SearchVideo"
+    }
+  ],
+  "entities": [
+    {
+      "name": "File Type",
+      "children": [
+        "ppt",
+        "Slides"
+      ]
+    },
+    {
+      "name": "FileName"
+    },
+    {
+      "name": "News"
+    },
+    {
+      "name": "VideoName"
+    },
+    {
+      "name": "VideoTypes",
+      "children": [
+        "Video",
+        "Cartoon",
+        "TV show",
+        "Lectures",
+        "Movie"
+      ]
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "datetime",
+    "temperature"
+  ],
+  "actions": [
+    {
+      "actionName": "GoBackASlide",
+      "intentName": "GoBackASlide",
+      "channel": null,
+      "actionParameters": [
+        {
+          "parameterName": "GoBack",
+          "entityName": "File Type",
+          "required": true,
+          "question": "Goback",
+          "phraseListFeatureName": "goback"
+        }
+      ]
+    },
+    {
+      "actionName": "OpenPowerpoint",
+      "intentName": "OpenPowerpoint",
+      "channel": null,
+      "actionParameters": [
+        {
+          "parameterName": "File Type",
+          "entityName": "File Type",
+          "required": true,
+          "question": "Which file",
+          "phraseListFeatureName": "FileType"
+        }
+      ]
+    },
+    {
+      "actionName": "OpenYoutube",
+      "intentName": "OpenYoutube",
+      "channel": null,
+      "actionParameters": []
+    },
+    {
+      "actionName": "SearchVideo",
+      "intentName": "SearchVideo",
+      "channel": null,
+      "actionParameters": [
+        {
+          "parameterName": "Video Name",
+          "entityName": "VideoTypes",
+          "required": true,
+          "question": "Which video",
+          "phraseListFeatureName": "VideoTypes"
+        }
+      ]
+    }
+  ],
+  "model_features": [
+    {
+      "name": "FileType",
+      "mode": true,
+      "words": "Powerpoint,slides,slide,ppt",
+      "activated": true
+    },
+    {
+      "name": "goback",
+      "mode": true,
+      "words": "return,go back,last,before,last slide,the slide before,go back one slide",
+      "activated": true
+    },
+    {
+      "name": "VideoTypes",
+      "mode": true,
+      "words": "movie,video,cartoon,lecture,tv show",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "what are top news for today?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what time is it right now",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is the temperature outside",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "open youtube",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "can you open youtube for me",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "youtube",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "open youtube for me",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "open youtube for me please",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "start youtube",
+      "intent": "OpenYoutube",
+      "entities": []
+    },
+    {
+      "text": "open the powerpoint called presentation",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the slides for me",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the slides",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the slides called resume",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the slides called haha",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the slides called harrypotter",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the powerpoint i worked on last night",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the powerpoint",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open a powerpoint for me",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open a powerpoint",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open powerpoint",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open this powerpoint",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open slides talks for me",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open slides for me",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the ppt talks",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the powerpoint talks",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "open the powerpoint called this",
+      "intent": "OpenPowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close youtube",
+      "intent": "CloseYoutube",
+      "entities": []
+    },
+    {
+      "text": "close the youtube video",
+      "intent": "CloseYoutube",
+      "entities": []
+    },
+    {
+      "text": "close youtube window",
+      "intent": "CloseYoutube",
+      "entities": []
+    },
+    {
+      "text": "close youtube for e",
+      "intent": "CloseYoutube",
+      "entities": []
+    },
+    {
+      "text": "close youtube im finished",
+      "intent": "CloseYoutube",
+      "entities": []
+    },
+    {
+      "text": "go to the next slide",
+      "intent": "AdvanceSlide",
+      "entities": []
+    },
+    {
+      "text": "next slide",
+      "intent": "AdvanceSlide",
+      "entities": []
+    },
+    {
+      "text": "go forward one slide",
+      "intent": "AdvanceSlide",
+      "entities": []
+    },
+    {
+      "text": "go to next slide",
+      "intent": "AdvanceSlide",
+      "entities": []
+    },
+    {
+      "text": "look up mit six double o six lectures",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "find the movie soylent green",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search the trailer of divergent",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for a music video",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for hack at brown on youtube",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for a tutorial in java",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for the presidential debate on youtube",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for this on youtube",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "look up harry potter on youtube",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "find the movie inside out",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "search for movies harry potter",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "find the cartoon family guy for me",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "find east campus time lapse",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "look up music john cena",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "search for cartoon tom and jerry",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "search movies",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "search for tom and jerry cartoon",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "search for the tv show black mirror",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for movies tom and jerry",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "search for harry potter movies",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "find the cartoon family guy",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "search for movie harry potter",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for movies",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "inside out",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "look up the movie divergent",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search a bruno mars music video for me",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "look up music video john cena",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "search for tom and jerry movie",
+      "intent": "SearchVideo",
+      "entities": []
+    },
+    {
+      "text": "find the movie family guy for me",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "find a funny video for me",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "look up a scary movie",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i want to watch despicable me",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 4,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "find anime episode",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoTypes",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "find black mirror episode one",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "i want to watch a trailer of fantastic beasts",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 7,
+          "endPos": 8
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "look up movie lion king",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "search the tv show homeland",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "look up the movie triangle",
+      "intent": "SearchVideo",
+      "entities": [
+        {
+          "entity": "VideoName",
+          "startPos": 4,
+          "endPos": 4
+        },
+        {
+          "entity": "VideoTypes",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "go back a slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "go to last slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "return to the last slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "go to the last slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "go back one slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "go back to the last slide",
+      "intent": "GoBackASlide",
+      "entities": []
+    },
+    {
+      "text": "close the powerpoint",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close powerpoint",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close the ppt",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close the slides for me",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close slides",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close a powerpoint",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close this powerpoint",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close the powerpoint for me",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "close the powerpoint called presentation",
+      "intent": "ClosePowerpoint",
+      "entities": []
+    },
+    {
+      "text": "pause",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "pause it",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "pause this video",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "pause that video",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "pause the video for me",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "stop the video",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "stop playing",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "pause playing",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "stop",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "stop the video for me",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "stop youtube",
+      "intent": "PauseVideo",
+      "entities": []
+    },
+    {
+      "text": "play",
+      "intent": "PlayVideo",
+      "entities": []
+    },
+    {
+      "text": "play the video",
+      "intent": "PlayVideo",
+      "entities": []
+    },
+    {
+      "text": "resume the video",
+      "intent": "PlayVideo",
+      "entities": []
+    },
+    {
+      "text": "keep playing",
+      "intent": "PlayVideo",
+      "entities": []
+    }
+  ]
+}
